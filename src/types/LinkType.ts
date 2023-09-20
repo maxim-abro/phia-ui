@@ -1,7 +1,6 @@
-
 export interface LinkType {
-  color?: "default" | "primary" | "success" | "info" | "warning" | "danger" | undefined;
-  disabled?: boolean;
-  href: string;
-  underline?: boolean;
+  color?: 'default' | 'primary' | 'success' | 'info' | 'warning' | 'danger' | undefined
+  disabled?: boolean
+  href: string
+  underline?: boolean
 }
