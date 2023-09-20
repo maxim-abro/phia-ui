@@ -6,5 +6,5 @@
   </div>
 </template>
 <script setup lang="ts">
-import MButton from "@/components/MButton.vue";
+import MButton from "@/components/basic/MButton.vue";
 </script>
