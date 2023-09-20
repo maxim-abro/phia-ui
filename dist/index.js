@@ -1,5 +1,5 @@
-import { defineComponent as u, computed as a, openBlock as d, createElementBlock as r, normalizeClass as p, renderSlot as _ } from "vue";
-const c = ["type", "disabled"], i = /* @__PURE__ */ u({
+import { defineComponent as s, computed as d, openBlock as a, createElementBlock as u, normalizeClass as r, renderSlot as _ } from "vue";
+const i = ["type", "disabled"], f = /* @__PURE__ */ s({
   __name: "MButton",
   props: {
     type: { default: "button" },
@@ -7,25 +7,44 @@ const c = ["type", "disabled"], i = /* @__PURE__ */ u({
     disabled: { type: Boolean, default: !1 },
     outline: { type: Boolean, default: !1 }
   },
-  setup(e) {
-    const t = e, o = a(() => `${t.color} ${t.outline ? "btn-outline" : ""}`);
-    return (n, s) => (d(), r("button", {
-      type: t.type,
-      onSubmit: s[0] || (s[0] = (l) => n.$emit("submit", l)),
-      class: p(["rounded px-3 py-1", o.value]),
-      disabled: t.disabled
+  setup(t) {
+    const e = t, o = d(() => `${e.color} ${e.outline ? "btn-outline" : ""}`);
+    return (n, l) => (a(), u("button", {
+      type: e.type,
+      onSubmit: l[0] || (l[0] = (c) => n.$emit("submit", c)),
+      class: r(["rounded px-3 py-1", o.value]),
+      disabled: e.disabled
     }, [
       _(n.$slots, "default", {}, void 0, !0)
-    ], 42, c));
+    ], 42, i));
   }
 });
-const f = (e, t) => {
-  const o = e.__vccOpts || e;
-  for (const [n, s] of t)
-    o[n] = s;
+const p = (t, e) => {
+  const o = t.__vccOpts || t;
+  for (const [n, l] of e)
+    o[n] = l;
   return o;
-}, y = /* @__PURE__ */ f(i, [["__scopeId", "data-v-3e70092f"]]);
+}, v = /* @__PURE__ */ p(f, [["__scopeId", "data-v-3e70092f"]]), y = ["href"], m = /* @__PURE__ */ s({
+  __name: "MLink",
+  props: {
+    color: { default: "default" },
+    disabled: { type: Boolean, default: !1 },
+    href: { default: "#" },
+    underline: { type: Boolean, default: !1 }
+  },
+  setup(t) {
+    const e = t, o = d(() => `${e.color} ${e.underline ? "link-underline" : ""} ${e.disabled ? "link-disabled" : ""}`);
+    return (n, l) => (a(), u("a", {
+      href: e.href,
+      class: r(o.value)
+    }, [
+      _(n.$slots, "default", {}, void 0, !0)
+    ], 10, y));
+  }
+});
+const $ = /* @__PURE__ */ p(m, [["__scopeId", "data-v-3d54355d"]]);
 export {
-  y as MButton
+  v as MButton,
+  $ as MLink
 };
 //# sourceMappingURL=index.js.map
