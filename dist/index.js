@@ -1,5 +1,5 @@
-import { defineComponent as d, computed as u, openBlock as a, createElementBlock as r, normalizeClass as p, renderSlot as _ } from "vue";
-const c = ["type", "disabled"], i = /* @__PURE__ */ d({
+import { defineComponent as a, computed as u, openBlock as d, createElementBlock as p, normalizeClass as r, renderSlot as i } from "vue";
+const f = ["type", "disabled"], b = /* @__PURE__ */ a({
   __name: "MButton",
   props: {
     type: { default: "button" },
@@ -7,25 +7,19 @@ const c = ["type", "disabled"], i = /* @__PURE__ */ d({
     disabled: { type: Boolean, default: !1 },
     outline: { type: Boolean, default: !1 }
   },
-  setup(e) {
-    const t = e, o = u(() => `${t.color} ${t.outline ? "btn-outline" : ""}`);
-    return (n, s) => (a(), r("button", {
-      type: t.type,
-      onSubmit: s[0] || (s[0] = (l) => n.$emit("submit", l)),
-      class: p(["rounded px-3 py-1", o.value]),
-      disabled: t.disabled
+  setup(l) {
+    const e = l, n = u(() => `${e.color} ${e.outline ? "btn-outline" : ""}`);
+    return (t, o) => (d(), p("button", {
+      type: e.type,
+      onSubmit: o[0] || (o[0] = (s) => t.$emit("submit", s)),
+      class: r(["rounded px-3 py-1", n.value]),
+      disabled: e.disabled
     }, [
-      _(n.$slots, "default", {}, void 0, !0)
-    ], 42, c));
+      i(t.$slots, "default")
+    ], 42, f));
   }
 });
-const b = (e, t) => {
-  const o = e.__vccOpts || e;
-  for (const [n, s] of t)
-    o[n] = s;
-  return o;
-}, m = /* @__PURE__ */ b(i, [["__scopeId", "data-v-d75fbbbd"]]);
 export {
-  m as MButton
+  b as MButton
 };
 //# sourceMappingURL=index.js.map
