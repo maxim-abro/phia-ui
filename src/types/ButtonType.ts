@@ -1,5 +1,6 @@
 export interface ButtonType {
   type?: "button" | "submit" | "reset" | undefined;
-  color?: string;
+  color?: "default" | "primary" | "success" | "info" | "warning" | "danger" | undefined;
   disabled?: boolean;
+  outline?: boolean;
 }
