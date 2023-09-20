@@ -8,6 +8,8 @@ ui library for vue 3.
 - button
 - link
 
+### form
+- checkbox
 
 ## commit types
 
