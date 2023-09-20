@@ -2,7 +2,11 @@
 
 ui library for vue 3.
 
-## Coming COON
+## Added components
+
+### Basic
+- button
+- link
 
 
 ## commit types
