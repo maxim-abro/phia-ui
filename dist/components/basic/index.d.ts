@@ -1,2 +1,2 @@
-export { default as MInput } from "./MButton.vue";
+export { default as MButton } from "./MButton.vue";
 //# sourceMappingURL=index.d.ts.map

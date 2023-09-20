@@ -1,16 +1,15 @@
-import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
+import { resolve } from 'node:path'
 import vue from '@vitejs/plugin-vue'
-import dtsPlugin from "vite-plugin-dts";
+import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
-    dtsPlugin({
+    dts({
       include: [
-        'src/index/ts',
+        'src/index.ts',
         'src/types',
         'src/components'
       ],
@@ -22,9 +21,27 @@ export default defineConfig({
       copyDtsFiles: true
     })
   ],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
-  }
+  esbuild: {
+    drop: ['debugger'],
+    pure: ['console.log']
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+    lib: {
+      entry: resolve(__dirname, 'src/index.ts'),
+      formats: ['es'],
+      fileName: (format) => {
+        return `[name].js`
+      },
+    },
+    rollupOptions: {
+      external: ['vue'],
+      output: {
+        globals: {
+          vue: 'Vue'
+        }
+      }
+    },
+  },
 })
