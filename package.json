@@ -1,9 +1,10 @@
 {
   "name": "mm-ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "dev": "vite --port 3000",
+    "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
@@ -40,5 +41,16 @@
     "vite": "^4.4.9",
     "vite-plugin-dts": "^3.5.3",
     "vue-tsc": "^1.8.11"
-  }
+  },
+  "peerDependencies": {
+    "vue": "^3.2.47"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ]
 }
