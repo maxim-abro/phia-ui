@@ -1,5 +1,5 @@
-import { defineComponent as s, computed as d, openBlock as a, createElementBlock as u, normalizeClass as r, renderSlot as _ } from "vue";
-const i = ["type", "disabled"], f = /* @__PURE__ */ s({
+import { defineComponent as d, computed as p, openBlock as u, createElementBlock as r, normalizeClass as _, renderSlot as f, ref as b, onMounted as m, watch as v, withDirectives as h, createElementVNode as i, vModelCheckbox as y, toDisplayString as k } from "vue";
+const $ = ["type", "disabled"], B = /* @__PURE__ */ d({
   __name: "MButton",
   props: {
     type: { default: "button" },
@@ -7,24 +7,24 @@ const i = ["type", "disabled"], f = /* @__PURE__ */ s({
     disabled: { type: Boolean, default: !1 },
     outline: { type: Boolean, default: !1 }
   },
-  setup(t) {
-    const e = t, o = d(() => `${e.color} ${e.outline ? "btn-outline" : ""}`);
-    return (n, l) => (a(), u("button", {
-      type: e.type,
-      onSubmit: l[0] || (l[0] = (c) => n.$emit("submit", c)),
-      class: r(["rounded px-3 py-1", o.value]),
-      disabled: e.disabled
+  setup(l) {
+    const t = l, n = p(() => `${t.color} ${t.outline ? "btn-outline" : ""}`);
+    return (o, e) => (u(), r("button", {
+      type: t.type,
+      onSubmit: e[0] || (e[0] = (a) => o.$emit("submit", a)),
+      class: _(["rounded px-3 py-1", n.value]),
+      disabled: t.disabled
     }, [
-      _(n.$slots, "default", {}, void 0, !0)
-    ], 42, i));
+      f(o.$slots, "default", {}, void 0, !0)
+    ], 42, $));
   }
 });
-const p = (t, e) => {
-  const o = t.__vccOpts || t;
-  for (const [n, l] of e)
-    o[n] = l;
-  return o;
-}, v = /* @__PURE__ */ p(f, [["__scopeId", "data-v-3e70092f"]]), y = ["href"], m = /* @__PURE__ */ s({
+const c = (l, t) => {
+  const n = l.__vccOpts || l;
+  for (const [o, e] of t)
+    n[o] = e;
+  return n;
+}, L = /* @__PURE__ */ c(B, [["__scopeId", "data-v-3e70092f"]]), M = ["href"], g = /* @__PURE__ */ d({
   __name: "MLink",
   props: {
     color: { default: "default" },
@@ -32,19 +32,55 @@ const p = (t, e) => {
     href: { default: "#" },
     underline: { type: Boolean, default: !1 }
   },
-  setup(t) {
-    const e = t, o = d(() => `${e.color} ${e.underline ? "link-underline" : ""} ${e.disabled ? "link-disabled" : ""}`);
-    return (n, l) => (a(), u("a", {
-      href: e.href,
-      class: r(o.value)
+  setup(l) {
+    const t = l, n = p(() => `${t.color} ${t.underline ? "link-underline" : ""} ${t.disabled ? "link-disabled" : ""}`);
+    return (o, e) => (u(), r("a", {
+      href: t.href,
+      class: _(n.value)
     }, [
-      _(n.$slots, "default", {}, void 0, !0)
-    ], 10, y));
+      f(o.$slots, "default", {}, void 0, !0)
+    ], 10, M));
   }
 });
-const $ = /* @__PURE__ */ p(m, [["__scopeId", "data-v-3d54355d"]]);
+const w = /* @__PURE__ */ c(g, [["__scopeId", "data-v-3d54355d"]]), C = { class: "flex items-center cursor-pointer" }, x = ["id", "name", "checked", "disabled"], I = ["for"], S = /* @__PURE__ */ d({
+  __name: "MCheckbox",
+  props: {
+    label: { type: [String, Number, Boolean], default: "" },
+    disabled: { type: Boolean, default: !1 },
+    name: { default: "" },
+    checked: { type: Boolean, default: !1 }
+  },
+  emits: ["update:modelValue"],
+  setup(l, { emit: t }) {
+    const n = l, o = b(!1);
+    return m(() => {
+      o.value = n.checked;
+    }), v(o, (e) => {
+      t("update:modelValue", e);
+    }), (e, a) => (u(), r("div", C, [
+      h(i("input", {
+        type: "checkbox",
+        id: e.name,
+        name: e.name,
+        checked: o.value,
+        disabled: e.disabled,
+        "onUpdate:modelValue": a[0] || (a[0] = (s) => o.value = s),
+        onChange: a[1] || (a[1] = (s) => e.$emit("change", s)),
+        class: "checkbox"
+      }, null, 40, x), [
+        [y, o.value]
+      ]),
+      i("label", {
+        class: "label",
+        for: e.name
+      }, k(e.label), 9, I)
+    ]));
+  }
+});
+const D = /* @__PURE__ */ c(S, [["__scopeId", "data-v-b9ad10a5"]]);
 export {
-  v as MButton,
-  $ as MLink
+  L as MButton,
+  D as MCheckbox,
+  w as MLink
 };
 //# sourceMappingURL=index.js.map
