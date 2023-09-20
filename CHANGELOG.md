@@ -1,3 +1,26 @@
+## <small>0.1.6 (2023-09-20)</small>
+
+* build: add index files for build project ([e6f1aa7](https://github.com/maxim-abro/mm-ui/commit/e6f1aa7))
+* build: build project ([7306ca2](https://github.com/maxim-abro/mm-ui/commit/7306ca2))
+* build: configuration the build ([9367a4b](https://github.com/maxim-abro/mm-ui/commit/9367a4b))
+* build: customization package json and add cjs ([75a3219](https://github.com/maxim-abro/mm-ui/commit/75a3219))
+* build: edit build config vite ([4156673](https://github.com/maxim-abro/mm-ui/commit/4156673))
+* build: edit gitignore ([60a7f29](https://github.com/maxim-abro/mm-ui/commit/60a7f29))
+* fix: edit ts config ([d65f75d](https://github.com/maxim-abro/mm-ui/commit/d65f75d))
+* fix: fix component button name ([6dbdc39](https://github.com/maxim-abro/mm-ui/commit/6dbdc39))
+* fix: fix import styles ([618a055](https://github.com/maxim-abro/mm-ui/commit/618a055))
+* feat: add component button ([ba195e8](https://github.com/maxim-abro/mm-ui/commit/ba195e8))
+* feat: delete preinstall ([74088c5](https://github.com/maxim-abro/mm-ui/commit/74088c5))
+* feat: edit package json file ([ec4644f](https://github.com/maxim-abro/mm-ui/commit/ec4644f))
+* feat: first commit ([1c12e04](https://github.com/maxim-abro/mm-ui/commit/1c12e04))
+* docs: add changelog, edit readme and edit add new scripts ([0e1f667](https://github.com/maxim-abro/mm-ui/commit/0e1f667))
+* docs: edit name project ([e62fbb3](https://github.com/maxim-abro/mm-ui/commit/e62fbb3))
+* style: add colors for tailwind ([f33b4bb](https://github.com/maxim-abro/mm-ui/commit/f33b4bb))
+* first commit ([09f4c71](https://github.com/maxim-abro/mm-ui/commit/09f4c71))
+* first commit ([ea716e9](https://github.com/maxim-abro/mm-ui/commit/ea716e9))
+
+
+
 ## <small>0.1.2 (2023-09-20)</small>
 
 * docs: add changelog, edit readme and edit add new scripts ([0e1f667](https://github.com/maxim-abro/mm-ui/commit/0e1f667))

@@ -25,3 +25,9 @@ const getClass = computed(() => {
   return `${props.color} ${props.outline ? 'btn-outline' : ''}`
 });
 </script>
+
+<style scoped>
+.default {
+  background: red;
+}
+</style>
