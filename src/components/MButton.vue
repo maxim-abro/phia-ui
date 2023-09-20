@@ -1,5 +1,5 @@
 <template>
-  <button @submit="$emit('submit', $event)">
+  <button :type="props.type" @submit="$emit('submit', $event)">
     <slot/>
   </button>
 </template>

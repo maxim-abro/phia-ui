@@ -1,5 +1,5 @@
 export interface ButtonType {
-  type?: string;
+  type?: "button" | "submit" | "reset" | undefined;
   color?: string;
   disabled?: boolean;
 }
