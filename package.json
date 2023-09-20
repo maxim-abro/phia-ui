@@ -7,7 +7,6 @@
     "build": "vue-tsc --noEmit && vite build",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --commit-path .",
     "preview": "vite preview",
-    "postinstall": "husky install",
     "prepack": "npm run changelog",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
