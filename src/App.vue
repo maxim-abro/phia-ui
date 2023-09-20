@@ -72,8 +72,20 @@
     <m-link disabled underline href="/test" class="mr-3" color="warning">warning</m-link>
     <m-link disabled underline href="/test" class="mr-3" color="danger">danger</m-link>
   </div>
+
+  <h2 class="text-3xl font-bold my-8">checkbox</h2>
+  <h3 class="text-xl font-bold my-4">default</h3>
+  <div class="">
+    <MCheckbox name="max" v-model="answer" :checked="answer" label="max"/>
+    <MCheckbox v-model="answer" name="mariya" label="Mariya"/>
+    {{ answer }}
+  </div>
 </template>
 <script setup lang="ts">
 import MButton from "./components/basic/MButton.vue";
 import MLink from "./components/basic/MLink.vue";
+import {ref} from "vue";
+import MCheckbox from "./components/form/MCheckbox.vue";
+
+const answer = ref(true);
 </script>
