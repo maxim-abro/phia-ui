@@ -100,12 +100,17 @@
 
     <h2 class="text-3xl font-bold my-8">input number</h2>
     <h3 class="text-xl font-bold my-4">default</h3>
-
     <div class="">
       <input-number />
       <input-number :steps="5" />
       <input-number :min="-5" :max="5" />
       <input-number disabled :min="-5" :max="5" />
+    </div>
+
+    <h2 class="text-3xl font-bold my-8">three</h2>
+    <h3 class="text-xl font-bold my-4">default</h3>
+    <div class="">
+      <m-three :data="three"/>
     </div>
   </div>
 </template>
@@ -116,6 +121,114 @@ import { ref } from 'vue'
 import MCheckbox from './components/form/MCheckbox.vue'
 import MInput from '@/components/form/MInput.vue'
 import InputNumber from '@/components/form/InputNumber.vue'
+import MThree from "@/components/data/MThree.vue";
 
 const answer = ref(true)
+
+const three = ref({
+  label: "Лейбл",
+  children: [
+    {
+      label: "Лейбл",
+      children: [
+        {
+          label: "Лейбл",
+          children: []
+        },
+        {
+          label: "Лейбл",
+          children: []
+        },
+      ]
+    },
+    {
+      label: "Лейбл",
+      children: []
+    },
+    {
+      label: "Лейбл",
+      children: [
+        {
+          label: "Лейбл",
+          children: [
+            {
+              label: "Лейбл",
+              children: []
+            },
+            {
+              label: "Лейбл",
+              children: []
+            },
+          ]
+        },
+      ]
+    },
+    {
+      label: "Лейбл",
+      children: [
+        {
+          label: "Лейбл",
+          children: []
+        },
+        {
+          label: "Лейбл",
+          children: [
+            {
+              label: "Лейбл",
+              children: [
+                {
+                  label: "Лейбл",
+                  children: []
+                },
+              ]
+            },
+          ]
+        },
+      ]
+    },
+    {
+      label: "Лейбл",
+      children: [
+        {
+          label: "Лейбл",
+          children: []
+        },
+        {
+          label: "Лейбл",
+          children: []
+        },
+        {
+          label: "Лейбл",
+          children: []
+        },
+        {
+          label: "Лейбл",
+          children: [
+            {
+              label: "Лейбл",
+              children: []
+            },
+            {
+              label: "Лейбл",
+              children: []
+            },
+            {
+              label: "Лейбл",
+              children: []
+            },
+          ]
+        },
+        {
+          label: "Лейбл",
+          children: []
+        },
+        {
+          label: "Лейбл",
+          children: []
+        },
+
+      ]
+    },
+  ]
+})
 </script>
