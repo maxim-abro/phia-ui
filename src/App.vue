@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto">
+  <div class="container mx-auto py-40">
     <h2 class="text-3xl font-bold my-8">Button</h2>
 
     <h3 class="text-xl font-bold my-4">default</h3>
@@ -112,6 +112,36 @@
     <div class="">
       <m-three :data="three"/>
     </div>
+
+    <h2 class="text-3xl font-bold my-8">progress</h2>
+    <h3 class="text-xl font-bold my-4">default</h3>
+    <div class="">
+      <m-progress
+        class="mb-4"
+        :percentage="35"
+      />
+      <m-progress
+        class="mb-4"
+        :percentage="35"
+        status="success"
+      />
+      <m-progress
+        class="mb-4"
+        :percentage="35"
+        status="exception"
+      />
+      <m-progress
+        class="mb-4"
+        :percentage="35"
+        status="warning"
+      />
+      <m-progress
+        class="mb-4"
+        :percentage="35"
+        status="success"
+        text-inside
+      />
+    </div>
   </div>
 </template>
 <script setup lang="ts">
@@ -122,6 +152,7 @@ import MCheckbox from './components/form/MCheckbox.vue'
 import MInput from '@/components/form/MInput.vue'
 import InputNumber from '@/components/form/InputNumber.vue'
 import MThree from "@/components/data/MThree.vue";
+import MProgress from "@/components/data/MProgress.vue";
 
 const answer = ref(true)
 
