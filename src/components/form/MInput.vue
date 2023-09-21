@@ -27,30 +27,31 @@
 </template>
 
 <script setup lang="ts">
-import type { InputType } from "@/types/InputType";
-import { Ref, ref, UnwrapRef } from "vue";
+import type { InputType } from '@/types/InputType'
+import { Ref, ref, UnwrapRef } from 'vue'
 
 const props = withDefaults(defineProps<InputType>(), {
-  type: "text",
+  type: 'text',
   clearable: false,
   showPassword: false,
-  disabled: false,
-});
+  disabled: false
+})
 
-const typeIn:Ref<UnwrapRef<string>> = ref(props.type);
-const emit = defineEmits(['update:modelValue']);
+const typeIn: Ref<UnwrapRef<string>> = ref(props.type)
+const emit = defineEmits(['update:modelValue'])
 
 function updateValue(event: any) {
-  emit("update:modelValue", event.target.value);
+  emit('update:modelValue', event.target.value)
 }
 
-const valueIn:Ref<UnwrapRef<string>> = ref("");
+const valueIn: Ref<UnwrapRef<string>> = ref('')
 
-const editShowPassword = () => typeIn.value === 'password' ? typeIn.value = 'text' : typeIn.value = 'password';
+const editShowPassword = () =>
+  typeIn.value === 'password' ? (typeIn.value = 'text') : (typeIn.value = 'password')
 
 function clear(e: any) {
-  valueIn.value = "";
-  emit('update:modelValue', '');
+  valueIn.value = ''
+  emit('update:modelValue', '')
 }
 </script>
 

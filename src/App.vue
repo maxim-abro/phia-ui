@@ -85,17 +85,27 @@
     <h2 class="text-3xl font-bold my-8">input</h2>
     <h3 class="text-xl font-bold my-4">default</h3>
     <div class="">
-      <m-input/>
+      <m-input />
     </div>
 
     <h3 class="text-xl font-bold my-4">clearable</h3>
     <div class="">
-      <m-input clearable/>
+      <m-input clearable />
     </div>
 
     <h3 class="text-xl font-bold my-4">showPass</h3>
     <div class="">
-      <m-input type="password" show-password/>
+      <m-input type="password" show-password />
+    </div>
+
+    <h2 class="text-3xl font-bold my-8">input number</h2>
+    <h3 class="text-xl font-bold my-4">default</h3>
+
+    <div class="">
+      <input-number />
+      <input-number :steps="5" />
+      <input-number :min="-5" :max="5" />
+      <input-number disabled :min="-5" :max="5" />
     </div>
   </div>
 </template>
@@ -104,7 +114,8 @@ import MButton from './components/basic/MButton.vue'
 import MLink from './components/basic/MLink.vue'
 import { ref } from 'vue'
 import MCheckbox from './components/form/MCheckbox.vue'
-import MInput from "@/components/form/MInput.vue";
+import MInput from '@/components/form/MInput.vue'
+import InputNumber from '@/components/form/InputNumber.vue'
 
 const answer = ref(true)
 </script>
