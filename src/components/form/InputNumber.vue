@@ -55,7 +55,7 @@ const input: Ref<UnwrapRef<string>> = ref('')
 const emit = defineEmits(['update:modelValue'])
 
 onMounted(() => {
-  input.value = props.inputValue
+  input.value = props.inputValue + ''
 })
 
 function editValue(symbol: string) {
@@ -80,10 +80,10 @@ function updateValue(value: number): void {
 function validateInput(): void {
   input.value = input.value.replace(/[^0-9]/gi, '')
   if (parseInt(input.value, 10) >= props.max) {
-    input.value = props.max
+    input.value = props.max + ''
   }
   if (parseInt(input.value, 10) <= props.min) {
-    input.value = props.min
+    input.value = props.min + ''
   }
 }
 
