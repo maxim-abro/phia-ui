@@ -10,6 +10,7 @@ ui library for vue 3.
 
 ### form
 - checkbox
+- input
 
 ## commit types
 
