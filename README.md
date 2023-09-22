@@ -21,6 +21,9 @@ ui library for vue 3.
 - badge
 - result
 
+### Notice
+- alert
+
 ## commit types
 
 - build

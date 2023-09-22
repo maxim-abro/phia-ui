@@ -188,17 +188,27 @@
 
     <h2 class="text-3xl font-bold my-8">result</h2>
     <h3 class="text-xl font-bold my-4">default</h3>
-
     <div class="grid grid-cols-4">
       <m-result icon="success" title="title" sub-title="subtitle description" />
       <m-result icon="warning" title="title" sub-title="subtitle description" />
       <m-result icon="info" title="title" sub-title="subtitle description" />
       <m-result icon="error" title="title" sub-title="subtitle description" />
     </div>
+
+    <h2 class="text-3xl font-bold my-8">alert</h2>
+    <h3 class="text-xl font-bold my-4">default</h3>
+    <div class="">
+      <m-button @click="openAlert('default')" class="mr-4">default</m-button>
+      <m-button @click="openAlert('success')" class="mr-4">success</m-button>
+      <m-button @click="openAlert('info')" class="mr-4">info</m-button>
+      <m-button @click="openAlert('error')" class="mr-4">error</m-button>
+    </div>
   </div>
+
+  <m-alert :open="alert" :type="typeAlert" title="hello world" @close="alert = false" />
 </template>
 <script setup lang="ts">
-import { ref } from 'vue'
+import { Ref, ref, UnwrapRef } from 'vue'
 import MButton from './components/basic/MButton.vue'
 import MLink from './components/basic/MLink.vue'
 import MCheckbox from './components/form/MCheckbox.vue'
@@ -210,10 +220,20 @@ import MTag from '@/components/data/MTag.vue'
 import MBadge from '@/components/data/MBadge.vue'
 import MSwitch from '@/components/form/MSwitch.vue'
 import MResult from '@/components/data/MResult.vue'
+import MAlert from '@/components/notice/MAlert.vue'
 
-const answer = ref(true)
+interface ThreeData {
+  label: string
+  children: ThreeData[]
+}
 
-const three = ref({
+const answer: Ref<UnwrapRef<boolean>> = ref(true)
+
+const alert: Ref<UnwrapRef<boolean>> = ref(false)
+const typeAlert: Ref<UnwrapRef<'default' | 'success' | 'warning' | 'info' | 'error'>> =
+  ref('default')
+
+const three: Ref<UnwrapRef<ThreeData>> = ref({
   label: 'Лейбл',
   children: [
     {
@@ -319,7 +339,12 @@ const three = ref({
   ]
 })
 
-function test() {
+function test(): void {
   console.log('test')
+}
+
+function openAlert(type: 'default' | 'success' | 'warning' | 'info' | 'error') {
+  typeAlert.value = type
+  alert.value = true
 }
 </script>
