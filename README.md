@@ -16,6 +16,7 @@ ui library for vue 3.
 ### Data
 - three
 - progress
+- tag
 
 ## commit types
 

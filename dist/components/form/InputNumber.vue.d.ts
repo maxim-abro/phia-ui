@@ -3,7 +3,7 @@ declare const _default: import("vue").DefineComponent<{
         type: import("vue").PropType<boolean>;
         default: boolean;
     };
-    steps: {
+    max: {
         type: import("vue").PropType<number>;
         default: number;
     };
@@ -11,7 +11,7 @@ declare const _default: import("vue").DefineComponent<{
         type: import("vue").PropType<number>;
         default: number;
     };
-    max: {
+    steps: {
         type: import("vue").PropType<number>;
         default: number;
     };
@@ -24,7 +24,7 @@ declare const _default: import("vue").DefineComponent<{
         type: import("vue").PropType<boolean>;
         default: boolean;
     };
-    steps: {
+    max: {
         type: import("vue").PropType<number>;
         default: number;
     };
@@ -32,7 +32,7 @@ declare const _default: import("vue").DefineComponent<{
         type: import("vue").PropType<number>;
         default: number;
     };
-    max: {
+    steps: {
         type: import("vue").PropType<number>;
         default: number;
     };
@@ -44,9 +44,9 @@ declare const _default: import("vue").DefineComponent<{
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
 }, {
     disabled: boolean;
-    steps: number;
-    min: number;
     max: number;
+    min: number;
+    steps: number;
     inputValue: number;
 }, {}>;
 export default _default;

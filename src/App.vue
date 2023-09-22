@@ -142,6 +142,24 @@
         text-inside
       />
     </div>
+
+    <h2 class="text-3xl font-bold my-8">tag</h2>
+    <h3 class="text-xl font-bold my-4">default</h3>
+    <div class="">
+      <m-tag class="mr-3">primary</m-tag>
+      <m-tag class="mr-3" type="success">success</m-tag>
+      <m-tag class="mr-3" type="info">info</m-tag>
+      <m-tag class="mr-3" type="warning">warning</m-tag>
+      <m-tag class="mr-3" type="danger">danger</m-tag>
+    </div>
+    <h3 class="text-xl font-bold my-4">closable</h3>
+    <div class="">
+      <m-tag closable @close="test" class="mr-3">primary</m-tag>
+      <m-tag closable @close="test" class="mr-3" type="success">success</m-tag>
+      <m-tag closable @close="test" class="mr-3" type="info">info</m-tag>
+      <m-tag closable @close="test" class="mr-3" type="warning">warning</m-tag>
+      <m-tag closable @close="test" class="mr-3" type="danger">danger</m-tag>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
@@ -152,7 +170,8 @@ import MCheckbox from './components/form/MCheckbox.vue'
 import MInput from '@/components/form/MInput.vue'
 import InputNumber from '@/components/form/InputNumber.vue'
 import MThree from "@/components/data/MThree.vue";
-import MProgress from "@/components/data/MProgress.vue";
+import MProgress from "@/components/data/MProgress.vue"
+import MTag from "@/components/data/MTag.vue";
 
 const answer = ref(true)
 
@@ -262,4 +281,8 @@ const three = ref({
     },
   ]
 })
+
+function test() {
+  console.log('test');
+}
 </script>
