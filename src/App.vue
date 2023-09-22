@@ -110,37 +110,17 @@
     <h2 class="text-3xl font-bold my-8">three</h2>
     <h3 class="text-xl font-bold my-4">default</h3>
     <div class="">
-      <m-three :data="three"/>
+      <m-three :data="three" />
     </div>
 
     <h2 class="text-3xl font-bold my-8">progress</h2>
     <h3 class="text-xl font-bold my-4">default</h3>
     <div class="">
-      <m-progress
-        class="mb-4"
-        :percentage="35"
-      />
-      <m-progress
-        class="mb-4"
-        :percentage="35"
-        status="success"
-      />
-      <m-progress
-        class="mb-4"
-        :percentage="35"
-        status="exception"
-      />
-      <m-progress
-        class="mb-4"
-        :percentage="35"
-        status="warning"
-      />
-      <m-progress
-        class="mb-4"
-        :percentage="35"
-        status="success"
-        text-inside
-      />
+      <m-progress class="mb-4" :percentage="35" />
+      <m-progress class="mb-4" :percentage="35" status="success" />
+      <m-progress class="mb-4" :percentage="35" status="exception" />
+      <m-progress class="mb-4" :percentage="35" status="warning" />
+      <m-progress class="mb-4" :percentage="35" status="success" text-inside />
     </div>
 
     <h2 class="text-3xl font-bold my-8">tag</h2>
@@ -199,6 +179,12 @@
         <m-button color="success">button</m-button>
       </m-badge>
     </div>
+
+    <h2 class="text-3xl font-bold my-8">switch</h2>
+    <h3 class="text-xl font-bold my-4">default</h3>
+    <div class="">
+      <m-switch>switch</m-switch>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
@@ -208,121 +194,121 @@ import { ref } from 'vue'
 import MCheckbox from './components/form/MCheckbox.vue'
 import MInput from '@/components/form/MInput.vue'
 import InputNumber from '@/components/form/InputNumber.vue'
-import MThree from "@/components/data/MThree.vue";
-import MProgress from "@/components/data/MProgress.vue"
-import MTag from "@/components/data/MTag.vue";
-import MBadge from "@/components/data/MBadge.vue";
+import MThree from '@/components/data/MThree.vue'
+import MProgress from '@/components/data/MProgress.vue'
+import MTag from '@/components/data/MTag.vue'
+import MBadge from '@/components/data/MBadge.vue'
+import MSwitch from '@/components/form/MSwitch.vue'
 
 const answer = ref(true)
 
 const three = ref({
-  label: "Лейбл",
+  label: 'Лейбл',
   children: [
     {
-      label: "Лейбл",
+      label: 'Лейбл',
       children: [
         {
-          label: "Лейбл",
+          label: 'Лейбл',
           children: []
         },
         {
-          label: "Лейбл",
+          label: 'Лейбл',
           children: []
-        },
+        }
       ]
     },
     {
-      label: "Лейбл",
+      label: 'Лейбл',
       children: []
     },
     {
-      label: "Лейбл",
+      label: 'Лейбл',
       children: [
         {
-          label: "Лейбл",
+          label: 'Лейбл',
           children: [
             {
-              label: "Лейбл",
+              label: 'Лейбл',
               children: []
             },
             {
-              label: "Лейбл",
+              label: 'Лейбл',
               children: []
-            },
+            }
           ]
-        },
+        }
       ]
     },
     {
-      label: "Лейбл",
+      label: 'Лейбл',
       children: [
         {
-          label: "Лейбл",
+          label: 'Лейбл',
           children: []
         },
         {
-          label: "Лейбл",
+          label: 'Лейбл',
           children: [
             {
-              label: "Лейбл",
+              label: 'Лейбл',
               children: [
                 {
-                  label: "Лейбл",
+                  label: 'Лейбл',
                   children: []
-                },
+                }
               ]
-            },
+            }
           ]
-        },
+        }
       ]
     },
     {
-      label: "Лейбл",
+      label: 'Лейбл',
       children: [
         {
-          label: "Лейбл",
+          label: 'Лейбл',
           children: []
         },
         {
-          label: "Лейбл",
+          label: 'Лейбл',
           children: []
         },
         {
-          label: "Лейбл",
+          label: 'Лейбл',
           children: []
         },
         {
-          label: "Лейбл",
+          label: 'Лейбл',
           children: [
             {
-              label: "Лейбл",
+              label: 'Лейбл',
               children: []
             },
             {
-              label: "Лейбл",
+              label: 'Лейбл',
               children: []
             },
             {
-              label: "Лейбл",
+              label: 'Лейбл',
               children: []
-            },
+            }
           ]
         },
         {
-          label: "Лейбл",
+          label: 'Лейбл',
           children: []
         },
         {
-          label: "Лейбл",
+          label: 'Лейбл',
           children: []
-        },
-
+        }
       ]
-    },
+    }
   ]
 })
 
 function test() {
-  console.log('test');
+  console.log('test')
 }
 </script>

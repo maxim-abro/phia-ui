@@ -1,5 +1,5 @@
 interface DataThree {
-  label: string,
+  label: string
   children: DataThree[]
 }
 

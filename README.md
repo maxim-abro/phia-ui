@@ -12,6 +12,7 @@ ui library for vue 3.
 - checkbox
 - input
 - input number
+- switch
 
 ### Data
 - three
