@@ -19,6 +19,7 @@ ui library for vue 3.
 - progress
 - tag
 - badge
+- result
 
 ## commit types
 

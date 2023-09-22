@@ -185,12 +185,22 @@
     <div class="">
       <m-switch>switch</m-switch>
     </div>
+
+    <h2 class="text-3xl font-bold my-8">result</h2>
+    <h3 class="text-xl font-bold my-4">default</h3>
+
+    <div class="grid grid-cols-4">
+      <m-result icon="success" title="title" sub-title="subtitle description" />
+      <m-result icon="warning" title="title" sub-title="subtitle description" />
+      <m-result icon="info" title="title" sub-title="subtitle description" />
+      <m-result icon="error" title="title" sub-title="subtitle description" />
+    </div>
   </div>
 </template>
 <script setup lang="ts">
+import { ref } from 'vue'
 import MButton from './components/basic/MButton.vue'
 import MLink from './components/basic/MLink.vue'
-import { ref } from 'vue'
 import MCheckbox from './components/form/MCheckbox.vue'
 import MInput from '@/components/form/MInput.vue'
 import InputNumber from '@/components/form/InputNumber.vue'
@@ -199,6 +209,7 @@ import MProgress from '@/components/data/MProgress.vue'
 import MTag from '@/components/data/MTag.vue'
 import MBadge from '@/components/data/MBadge.vue'
 import MSwitch from '@/components/form/MSwitch.vue'
+import MResult from '@/components/data/MResult.vue'
 
 const answer = ref(true)
 
