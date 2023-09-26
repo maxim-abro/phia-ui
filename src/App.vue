@@ -214,6 +214,26 @@
     <m-select placeholder="Выберите город" disabled>
       <option v-for="i of list" :key="i.title">{{ i.title }}</option>
     </m-select>
+
+    <h2 class="text-3xl font-bold my-8">Collapse</h2>
+    <h3 class="text-xl font-bold my-4">default</h3>
+    <m-collapse>
+      <m-collapse-item title="collapse 1" :id="1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis culpa deserunt
+        eveniet maxime modi neque nisi officiis provident repellendus. Accusantium eaque
+        exercitationem ipsum modi neque nulla perspiciatis temporibus tenetur?
+      </m-collapse-item>
+      <m-collapse-item title="collapse 2" :id="2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis culpa deserunt
+        eveniet maxime modi neque nisi officiis provident repellendus. Accusantium eaque
+        exercitationem ipsum modi neque nulla perspiciatis temporibus tenetur?
+      </m-collapse-item>
+      <m-collapse-item title="collapse 3" :id="3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis culpa deserunt
+        eveniet maxime modi neque nisi officiis provident repellendus. Accusantium eaque
+        exercitationem ipsum modi neque nulla perspiciatis temporibus tenetur?
+      </m-collapse-item>
+    </m-collapse>
   </div>
 
   <m-alert :open="alert" :type="typeAlert" title="hello world" @close="alert = false" />
@@ -233,6 +253,8 @@ import MSwitch from '@/components/form/MSwitch.vue'
 import MResult from '@/components/data/MResult.vue'
 import MAlert from '@/components/notice/MAlert.vue'
 import MSelect from '@/components/form/MSelect.vue'
+import MCollapse from '@/components/data/collapse/MCollapse.vue'
+import MCollapseItem from '@/components/data/collapse/MCollapseItem.vue'
 
 interface ThreeData {
   label: string
