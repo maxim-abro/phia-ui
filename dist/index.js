@@ -1,4 +1,4 @@
-import { defineComponent as p, computed as w, openBlock as o, createElementBlock as n, normalizeClass as _, renderSlot as y, ref as m, onMounted as B, watch as k, withDirectives as $, createElementVNode as r, vModelCheckbox as S, toDisplayString as f, vModelDynamic as N, createCommentVNode as i, vModelText as D, vModelSelect as P, resolveComponent as U, createTextVNode as M, createBlock as z, Transition as O, withCtx as T, Fragment as A, renderList as R, normalizeStyle as L, pushScopeId as C, popScopeId as V, createVNode as E, reactive as j } from "vue";
+import { defineComponent as p, computed as w, openBlock as o, createElementBlock as n, normalizeClass as _, renderSlot as y, ref as m, onMounted as B, watch as k, withDirectives as $, createElementVNode as r, vModelCheckbox as S, toDisplayString as f, vModelDynamic as P, createCommentVNode as c, vModelText as U, vModelSelect as A, resolveComponent as O, createTextVNode as x, createBlock as z, Transition as R, withCtx as T, Fragment as N, renderList as D, normalizeStyle as L, pushScopeId as C, popScopeId as V, createVNode as E, reactive as j } from "vue";
 const F = ["type", "disabled"], q = /* @__PURE__ */ p({
   __name: "MButton",
   props: {
@@ -42,7 +42,7 @@ const v = (a, s) => {
     ], 10, H));
   }
 });
-const He = /* @__PURE__ */ v(J, [["__scopeId", "data-v-345b854e"]]), K = { class: "flex items-center cursor-pointer" }, Q = ["id", "name", "checked", "disabled"], W = ["for"], X = /* @__PURE__ */ p({
+const Xe = /* @__PURE__ */ v(J, [["__scopeId", "data-v-345b854e"]]), K = { class: "flex items-center cursor-pointer" }, Q = ["id", "name", "checked", "disabled"], W = ["for"], X = /* @__PURE__ */ p({
   __name: "MCheckbox",
   props: {
     label: { type: [String, Number, Boolean], default: "" },
@@ -64,8 +64,8 @@ const He = /* @__PURE__ */ v(J, [["__scopeId", "data-v-345b854e"]]), K = { class
         name: l.name,
         checked: t.value,
         disabled: l.disabled,
-        "onUpdate:modelValue": d[0] || (d[0] = (c) => t.value = c),
-        onChange: d[1] || (d[1] = (c) => l.$emit("change", c)),
+        "onUpdate:modelValue": d[0] || (d[0] = (i) => t.value = i),
+        onChange: d[1] || (d[1] = (i) => l.$emit("change", i)),
         class: "checkbox"
       }, null, 40, Q), [
         [S, t.value]
@@ -77,7 +77,7 @@ const He = /* @__PURE__ */ v(J, [["__scopeId", "data-v-345b854e"]]), K = { class
     ]));
   }
 });
-const Je = /* @__PURE__ */ v(X, [["__scopeId", "data-v-f3e5f538"]]), Y = { class: "relative" }, Z = ["type", "placeholder", "disabled"], ee = /* @__PURE__ */ p({
+const Ye = /* @__PURE__ */ v(X, [["__scopeId", "data-v-f3e5f538"]]), Y = { class: "relative" }, Z = ["type", "placeholder", "disabled"], ee = /* @__PURE__ */ p({
   __name: "MInput",
   props: {
     type: { default: "text" },
@@ -92,7 +92,7 @@ const Je = /* @__PURE__ */ v(X, [["__scopeId", "data-v-f3e5f538"]]), Y = { class
     function l(h) {
       s("update:modelValue", h.target.value);
     }
-    const d = m(""), c = () => t.value === "password" ? t.value = "text" : t.value = "password";
+    const d = m(""), i = () => t.value === "password" ? t.value = "text" : t.value = "password";
     function g(h) {
       d.value = "", s("update:modelValue", "");
     }
@@ -105,22 +105,22 @@ const Je = /* @__PURE__ */ v(X, [["__scopeId", "data-v-f3e5f538"]]), Y = { class
         class: "input",
         "onUpdate:modelValue": u[0] || (u[0] = (b) => d.value = b)
       }, null, 40, Z), [
-        [N, d.value]
+        [P, d.value]
       ]),
       e.clearable && d.value.length ? (o(), n("button", {
         key: 0,
         class: "absolute right-2 top-1/2 -translate-y-1/2",
         onClick: g
-      }, " clear ")) : i("", !0),
+      }, " clear ")) : c("", !0),
       e.showPassword ? (o(), n("button", {
         key: 1,
         class: "absolute right-2 top-1/2 -translate-y-1/2",
-        onClick: c
-      }, " eye ")) : i("", !0)
+        onClick: i
+      }, " eye ")) : c("", !0)
     ]));
   }
 });
-const Ke = /* @__PURE__ */ v(ee, [["__scopeId", "data-v-a4b03207"]]), te = ["disabled"], se = ["disabled"], ae = ["disabled"], Qe = /* @__PURE__ */ p({
+const Ze = /* @__PURE__ */ v(ee, [["__scopeId", "data-v-a4b03207"]]), te = ["disabled"], se = ["disabled"], ae = ["disabled"], et = /* @__PURE__ */ p({
   __name: "InputNumber",
   props: {
     steps: { default: 1 },
@@ -141,7 +141,7 @@ const Ke = /* @__PURE__ */ v(ee, [["__scopeId", "data-v-a4b03207"]]), te = ["dis
     function d(u) {
       (u || u === 0) && (t.value = u + ""), s("update:modelValue", u);
     }
-    function c() {
+    function i() {
       t.value = t.value.replace(/[^0-9]/gi, ""), parseInt(t.value, 10) >= e.max && (t.value = e.max + ""), parseInt(t.value, 10) <= e.min && (t.value = e.min + "");
     }
     const g = w(() => parseInt(t.value, 10) === e.min), h = w(() => parseInt(t.value, 10) === e.max);
@@ -157,13 +157,13 @@ const Ke = /* @__PURE__ */ v(ee, [["__scopeId", "data-v-a4b03207"]]), te = ["dis
         disabled: g.value || u.disabled
       }, " - ", 10, te),
       $(r("input", {
-        onBlur: c,
+        onBlur: i,
         "onUpdate:modelValue": b[1] || (b[1] = (I) => t.value = I),
         type: "text",
         disabled: u.disabled,
         class: _(["text-center focus:outline-none w-14 h-full", { "text-zinc-400": u.disabled }])
       }, null, 42, se), [
-        [D, t.value]
+        [U, t.value]
       ]),
       r("button", {
         class: _(["px-4 py-3 bg-zinc-100 rounded-r font-bold", {
@@ -175,7 +175,7 @@ const Ke = /* @__PURE__ */ v(ee, [["__scopeId", "data-v-a4b03207"]]), te = ["dis
       }, " + ", 10, ae)
     ], 2));
   }
-}), le = { class: "relative flex items-center group p-2 cursor-pointer" }, oe = /* @__PURE__ */ r("span", { class: "w-12 h-6 flex items-center flex-shrink-0 ml-4 p-1 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-primary after:w-5 after:h-5 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-5 group-hover:after:translate-x-0" }, null, -1), We = /* @__PURE__ */ p({
+}), le = { class: "relative flex items-center group p-2 cursor-pointer" }, oe = /* @__PURE__ */ r("span", { class: "w-12 h-6 flex items-center flex-shrink-0 ml-4 p-1 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-primary after:w-5 after:h-5 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-5 group-hover:after:translate-x-0" }, null, -1), tt = /* @__PURE__ */ p({
   __name: "MSwitch",
   props: {
     checked: { type: Boolean, default: !1 }
@@ -191,7 +191,7 @@ const Ke = /* @__PURE__ */ v(ee, [["__scopeId", "data-v-a4b03207"]]), te = ["dis
     ), (l, d) => (o(), n("label", le, [
       y(l.$slots, "default"),
       $(r("input", {
-        "onUpdate:modelValue": d[0] || (d[0] = (c) => t.value = c),
+        "onUpdate:modelValue": d[0] || (d[0] = (i) => t.value = i),
         type: "checkbox",
         class: "absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md"
       }, null, 512), [
@@ -224,20 +224,20 @@ const Ke = /* @__PURE__ */ v(ee, [["__scopeId", "data-v-a4b03207"]]), te = ["dis
     ), (l, d) => $((o(), n("select", {
       name: l.name,
       disabled: l.disabled,
-      "onUpdate:modelValue": d[0] || (d[0] = (c) => t.value = c),
+      "onUpdate:modelValue": d[0] || (d[0] = (i) => t.value = i),
       class: "select-container"
     }, [
-      l.placeholder ? (o(), n("option", de, f(l.placeholder), 1)) : i("", !0),
+      l.placeholder ? (o(), n("option", de, f(l.placeholder), 1)) : c("", !0),
       y(l.$slots, "default", {}, void 0, !0)
     ], 8, ne)), [
-      [P, t.value]
+      [A, t.value]
     ]);
   }
 });
-const Xe = /* @__PURE__ */ v(re, [["__scopeId", "data-v-829bf71d"]]), ue = { class: "" }, ie = {
+const st = /* @__PURE__ */ v(re, [["__scopeId", "data-v-829bf71d"]]), ue = { class: "" }, ie = {
   key: 0,
   class: "pl-4"
-}, Ye = /* @__PURE__ */ p({
+}, at = /* @__PURE__ */ p({
   __name: "MThree",
   props: {
     data: {}
@@ -245,19 +245,19 @@ const Xe = /* @__PURE__ */ v(re, [["__scopeId", "data-v-829bf71d"]]), ue = { cla
   setup(a) {
     const s = a, e = m(!1);
     return (t, l) => {
-      const d = U("m-three", !0);
+      const d = O("m-three", !0);
       return o(), n("ul", ue, [
         r("span", {
           class: "hover:bg-zinc-100 py-1.5 px-3 cursor-pointer",
-          onClick: l[0] || (l[0] = (c) => s.data.children.length ? e.value = !e.value : "")
+          onClick: l[0] || (l[0] = (i) => s.data.children.length ? e.value = !e.value : "")
         }, [
-          M(f(s.data.label) + " ", 1),
+          x(f(s.data.label) + " ", 1),
           s.data.children.length ? (o(), n("span", {
             key: 0,
             class: _(e.value ? "rotate-180" : "")
-          }, "^", 2)) : i("", !0)
+          }, "^", 2)) : c("", !0)
         ]),
-        s.data.children.length ? (o(), z(O, {
+        s.data.children.length ? (o(), z(R, {
           key: 0,
           "enter-active-class": "duration-500 ease",
           "enter-class": "overflow-hidden max-h-0",
@@ -268,14 +268,14 @@ const Xe = /* @__PURE__ */ v(re, [["__scopeId", "data-v-829bf71d"]]), ue = { cla
         }, {
           default: T(() => [
             e.value ? (o(), n("li", ie, [
-              (o(!0), n(A, null, R(s.data.children, (c, g) => (o(), z(d, {
-                data: c,
+              (o(!0), n(N, null, D(s.data.children, (i, g) => (o(), z(d, {
+                data: i,
                 key: g
               }, null, 8, ["data"]))), 128))
-            ])) : i("", !0)
+            ])) : c("", !0)
           ]),
           _: 1
-        })) : i("", !0)
+        })) : c("", !0)
       ]);
     };
   }
@@ -310,15 +310,15 @@ const Xe = /* @__PURE__ */ v(re, [["__scopeId", "data-v-829bf71d"]]), ue = { cla
           class: _(["progressbar-inner", s.status]),
           style: L({ width: `${e.percentage}%` })
         }, [
-          e.textInside && e.percentage > 10 ? (o(), n("span", ce, f(e.percentage) + "% ", 1)) : i("", !0)
+          e.textInside && e.percentage > 10 ? (o(), n("span", ce, f(e.percentage) + "% ", 1)) : c("", !0)
         ], 6)
       ], 2),
-      !e.status && !e.textInside ? (o(), n("div", pe, f(e.percentage) + "%", 1)) : i("", !0),
-      e.status && !e.textInside ? (o(), n("div", _e, f(e.status), 1)) : i("", !0)
+      !e.status && !e.textInside ? (o(), n("div", pe, f(e.percentage) + "%", 1)) : c("", !0),
+      e.status && !e.textInside ? (o(), n("div", _e, f(e.status), 1)) : c("", !0)
     ], 4));
   }
 });
-const Ze = /* @__PURE__ */ v(fe, [["__scopeId", "data-v-3347630f"]]), ve = (a) => (C("data-v-18dbc0bb"), a = a(), V(), a), he = /* @__PURE__ */ ve(() => /* @__PURE__ */ r("path", { d: "M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" }, null, -1)), me = [
+const lt = /* @__PURE__ */ v(fe, [["__scopeId", "data-v-3347630f"]]), ve = (a) => (C("data-v-18dbc0bb"), a = a(), V(), a), he = /* @__PURE__ */ ve(() => /* @__PURE__ */ r("path", { d: "M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" }, null, -1)), me = [
   he
 ], be = /* @__PURE__ */ p({
   __name: "MTag",
@@ -341,11 +341,11 @@ const Ze = /* @__PURE__ */ v(fe, [["__scopeId", "data-v-3347630f"]]), ve = (a) =
         fill: "currentColor",
         class: _(["inline rounded-full hover:bg-black cursor-pointer ml-1", `close-${e.type}`]),
         viewBox: "0 0 16 16"
-      }, me, 2)) : i("", !0)
+      }, me, 2)) : c("", !0)
     ], 2));
   }
 });
-const et = /* @__PURE__ */ v(be, [["__scopeId", "data-v-18dbc0bb"]]), ye = { class: "relative inline-block" }, ge = /* @__PURE__ */ p({
+const ot = /* @__PURE__ */ v(be, [["__scopeId", "data-v-18dbc0bb"]]), ye = { class: "relative inline-block" }, ge = /* @__PURE__ */ p({
   __name: "MBadge",
   props: {
     value: { default: 0 },
@@ -361,11 +361,11 @@ const et = /* @__PURE__ */ v(be, [["__scopeId", "data-v-18dbc0bb"]]), ye = { cla
       l.value ? (o(), n("sup", {
         key: 0,
         class: _(["badge", t.value])
-      }, f(e.value), 3)) : i("", !0)
+      }, f(e.value), 3)) : c("", !0)
     ]));
   }
 });
-const tt = /* @__PURE__ */ v(ge, [["__scopeId", "data-v-70779e47"]]), x = (a) => (C("data-v-a5a43abc"), a = a(), V(), a), we = { class: "flex flex-col items-center" }, $e = {
+const nt = /* @__PURE__ */ v(ge, [["__scopeId", "data-v-70779e47"]]), M = (a) => (C("data-v-a5a43abc"), a = a(), V(), a), we = { class: "flex flex-col items-center" }, $e = {
   key: 0,
   xmlns: "http://www.w3.org/2000/svg",
   width: "16",
@@ -373,9 +373,9 @@ const tt = /* @__PURE__ */ v(ge, [["__scopeId", "data-v-70779e47"]]), x = (a) =>
   fill: "currentColor",
   class: "icon success",
   viewBox: "0 0 16 16"
-}, ke = /* @__PURE__ */ x(() => /* @__PURE__ */ r("path", { d: "M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" }, null, -1)), Me = [
+}, ke = /* @__PURE__ */ M(() => /* @__PURE__ */ r("path", { d: "M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" }, null, -1)), xe = [
   ke
-], xe = {
+], Me = {
   key: 1,
   xmlns: "http://www.w3.org/2000/svg",
   width: "16",
@@ -383,7 +383,7 @@ const tt = /* @__PURE__ */ v(ge, [["__scopeId", "data-v-70779e47"]]), x = (a) =>
   fill: "currentColor",
   class: "icon info",
   viewBox: "0 0 16 16"
-}, Ie = /* @__PURE__ */ x(() => /* @__PURE__ */ r("path", { d: "m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" }, null, -1)), Be = [
+}, Ie = /* @__PURE__ */ M(() => /* @__PURE__ */ r("path", { d: "m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" }, null, -1)), Be = [
   Ie
 ], Ce = {
   key: 2,
@@ -393,7 +393,7 @@ const tt = /* @__PURE__ */ v(ge, [["__scopeId", "data-v-70779e47"]]), x = (a) =>
   fill: "currentColor",
   class: "icon warning",
   viewBox: "0 0 16 16"
-}, Ve = /* @__PURE__ */ x(() => /* @__PURE__ */ r("path", { d: "M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.553.553 0 0 1-1.1 0L7.1 4.995z" }, null, -1)), ze = [
+}, Ve = /* @__PURE__ */ M(() => /* @__PURE__ */ r("path", { d: "M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.553.553 0 0 1-1.1 0L7.1 4.995z" }, null, -1)), ze = [
   Ve
 ], Le = {
   key: 3,
@@ -403,7 +403,7 @@ const tt = /* @__PURE__ */ v(ge, [["__scopeId", "data-v-70779e47"]]), x = (a) =>
   fill: "currentColor",
   class: "icon error",
   viewBox: "0 0 16 16"
-}, Se = /* @__PURE__ */ x(() => /* @__PURE__ */ r("path", { d: "M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" }, null, -1)), Te = [
+}, Se = /* @__PURE__ */ M(() => /* @__PURE__ */ r("path", { d: "M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" }, null, -1)), Te = [
   Se
 ], Ne = { class: "title" }, De = { class: "subtitle" }, Pe = /* @__PURE__ */ p({
   __name: "MResult",
@@ -414,10 +414,10 @@ const tt = /* @__PURE__ */ v(ge, [["__scopeId", "data-v-70779e47"]]), x = (a) =>
   },
   setup(a) {
     return (s, e) => (o(), n("div", we, [
-      s.icon === "success" ? (o(), n("svg", $e, Me)) : i("", !0),
-      s.icon === "info" ? (o(), n("svg", xe, Be)) : i("", !0),
-      s.icon === "warning" ? (o(), n("svg", Ce, ze)) : i("", !0),
-      s.icon === "error" ? (o(), n("svg", Le, Te)) : i("", !0),
+      s.icon === "success" ? (o(), n("svg", $e, xe)) : c("", !0),
+      s.icon === "info" ? (o(), n("svg", Me, Be)) : c("", !0),
+      s.icon === "warning" ? (o(), n("svg", Ce, ze)) : c("", !0),
+      s.icon === "error" ? (o(), n("svg", Le, Te)) : c("", !0),
       r("div", Ne, f(s.title), 1),
       r("div", De, f(s.subTitle), 1),
       E(G, {
@@ -426,14 +426,14 @@ const tt = /* @__PURE__ */ v(ge, [["__scopeId", "data-v-70779e47"]]), x = (a) =>
         onClick: e[0] || (e[0] = (t) => s.$emit("back", t))
       }, {
         default: T(() => [
-          M("Назад")
+          x("Назад")
         ]),
         _: 1
       })
     ]));
   }
 });
-const st = /* @__PURE__ */ v(Pe, [["__scopeId", "data-v-a5a43abc"]]), at = /* @__PURE__ */ p({
+const dt = /* @__PURE__ */ v(Pe, [["__scopeId", "data-v-a5a43abc"]]), rt = /* @__PURE__ */ p({
   __name: "MCollapse",
   props: {
     accordion: { type: Boolean, default: !1 }
@@ -448,10 +448,10 @@ const st = /* @__PURE__ */ v(Pe, [["__scopeId", "data-v-a5a43abc"]]), at = /* @_
       y(e.$slots, "default")
     ], 512));
   }
-}), Ue = { class: "border-t border-b" }, Oe = /* @__PURE__ */ r("span", null, "galka", -1), Ae = {
+}), Ue = { class: "border-t border-b" }, Ae = /* @__PURE__ */ r("span", null, "galka", -1), Oe = {
   key: 0,
   class: "mb-2"
-}, lt = /* @__PURE__ */ p({
+}, ut = /* @__PURE__ */ p({
   __name: "MCollapseItem",
   props: {
     title: { default: "" },
@@ -466,17 +466,17 @@ const st = /* @__PURE__ */ v(Pe, [["__scopeId", "data-v-a5a43abc"]]), at = /* @_
     function l() {
       e.disabled || (t.bool = !t.bool, s("toggle", { isOpen: t.bool, id: e.id }));
     }
-    return (d, c) => (o(), n("div", Ue, [
+    return (d, i) => (o(), n("div", Ue, [
       r("div", {
         class: "cursor-pointer w-full py-4 mb-2 flex justify-between items-center",
         onClick: l
       }, [
-        M(f(d.title) + " ", 1),
-        Oe
+        x(f(d.title) + " ", 1),
+        Ae
       ]),
-      t.bool ? (o(), n("div", Ae, [
+      t.bool ? (o(), n("div", Oe, [
         y(d.$slots, "default")
-      ])) : i("", !0)
+      ])) : c("", !0)
     ]));
   }
 }), Re = (a) => (C("data-v-2ea94c56"), a = a(), V(), a), Ee = { class: "relative" }, je = /* @__PURE__ */ Re(() => /* @__PURE__ */ r("svg", {
@@ -513,30 +513,67 @@ const st = /* @__PURE__ */ v(Pe, [["__scopeId", "data-v-a5a43abc"]]), at = /* @_
       class: _(["rounded text-white p-2 fixed bottom-3 shadow shadow-lg shadow-zinc-500 left-1/2 z-50 w-11/12 -translate-x-1/2", l.type])
     }, [
       r("div", Ee, [
-        M(f(l.title) + " ", 1),
+        x(f(l.title) + " ", 1),
         r("button", {
-          onClick: d[0] || (d[0] = (c) => l.$emit("close"))
+          onClick: d[0] || (d[0] = (i) => l.$emit("close"))
         }, Fe)
       ])
-    ], 2)) : i("", !0);
+    ], 2)) : c("", !0);
   }
 });
-const ot = /* @__PURE__ */ v(qe, [["__scopeId", "data-v-2ea94c56"]]);
+const it = /* @__PURE__ */ v(qe, [["__scopeId", "data-v-2ea94c56"]]), Ge = { class: "flex items-center flex-wrap" }, He = /* @__PURE__ */ r("li", null, [
+  /* @__PURE__ */ r("a", {
+    class: "text-gray-600 text-xs md:text-base hover:underline",
+    href: "/"
+  }, "Главная")
+], -1), Je = /* @__PURE__ */ r("span", { class: "mx-3 text-gray-500 text-xs md:text-base" }, " / ", -1), Ke = ["href"], Qe = {
+  key: 1,
+  class: "text-primary text-xs md:text-base"
+}, ct = /* @__PURE__ */ p({
+  __name: "MBreadcrumbs",
+  props: {
+    crumbs: {}
+  },
+  setup(a) {
+    const s = a;
+    function e(t) {
+      return t === s.crumbs.length;
+    }
+    return (t, l) => (o(), n("nav", null, [
+      r("ol", Ge, [
+        He,
+        (o(!0), n(N, null, D(t.crumbs, (d, i) => (o(), n("li", {
+          key: i,
+          class: _(["breadcrumb-item", { "text-primary": e(i) }])
+        }, [
+          Je,
+          d.link ? (o(), n("a", {
+            key: 0,
+            class: "text-gray-600 text-xs md:text-base hover:underline",
+            href: d.link
+          }, f(d.title), 9, Ke)) : c("", !0),
+          d.link ? c("", !0) : (o(), n("span", Qe, f(d.title), 1))
+        ], 2))), 128))
+      ])
+    ]));
+  }
+});
 export {
-  ot as MAlert,
-  tt as MBadge,
+  it as MAlert,
+  nt as MBadge,
+  ct as MBreadcrumb,
   G as MButton,
-  Je as MCheckbox,
-  at as MCollapse,
-  lt as MCollapseItem,
-  Ke as MInput,
-  Qe as MInputNumber,
-  He as MLink,
-  Ze as MProgress,
-  st as MResult,
-  Xe as MSelect,
-  We as MSwitch,
-  et as MTag,
-  Ye as MThree
+  Ye as MCheckbox,
+  rt as MCollapse,
+  ut as MCollapseItem,
+  Ze as MInput,
+  et as MInputNumber,
+  Xe as MLink,
+  lt as MProgress,
+  dt as MResult,
+  st as MSelect,
+  tt as MSwitch,
+  ot as MTag,
+  at as MThree
 };
 //# sourceMappingURL=index.js.map

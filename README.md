@@ -25,6 +25,9 @@ ui library for vue 3.
 ### Notice
 - alert
 
+### Navigation
+- Breadcrumbs
+
 ## commit types
 
 - build

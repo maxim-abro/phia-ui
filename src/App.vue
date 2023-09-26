@@ -234,6 +234,10 @@
         exercitationem ipsum modi neque nulla perspiciatis temporibus tenetur?
       </m-collapse-item>
     </m-collapse>
+
+    <h2 class="text-3xl font-bold my-8">Breadcrumbs</h2>
+    <h3 class="text-xl font-bold my-4">default</h3>
+    <m-breadcrumbs :crumbs="bc" />
   </div>
 
   <m-alert :open="alert" :type="typeAlert" title="hello world" @close="alert = false" />
@@ -255,6 +259,8 @@ import MAlert from '@/components/notice/MAlert.vue'
 import MSelect from '@/components/form/MSelect.vue'
 import MCollapse from '@/components/data/collapse/MCollapse.vue'
 import MCollapseItem from '@/components/data/collapse/MCollapseItem.vue'
+import MBreadcrumbs from '@/components/navigation/MBreadcrumbs.vue'
+import type { Crumb } from '@/types/BreadcrumbsType'
 
 interface ThreeData {
   label: string
@@ -265,6 +271,21 @@ interface CityList {
   title: string
   value: string
 }
+
+const bc: Crumb[] = [
+  {
+    title: 'category',
+    link: '/cat'
+  },
+  {
+    title: 'dogs',
+    link: '/cat/dogs'
+  },
+  {
+    title: '/doberman',
+    link: null
+  }
+]
 
 const answer: Ref<UnwrapRef<boolean>> = ref(true)
 
