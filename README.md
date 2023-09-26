@@ -13,6 +13,7 @@ ui library for vue 3.
 - input
 - input number
 - switch
+- select
 
 ### Data
 - three

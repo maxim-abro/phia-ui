@@ -203,6 +203,17 @@
       <m-button @click="openAlert('info')" class="mr-4">info</m-button>
       <m-button @click="openAlert('error')" class="mr-4">error</m-button>
     </div>
+
+    <h2 class="text-3xl font-bold my-8">Select</h2>
+    <h3 class="text-xl font-bold my-4">default</h3>
+    <m-select placeholder="Выберите город">
+      <option v-for="i of list" :key="i.title">{{ i.title }}</option>
+    </m-select>
+
+    <h3 class="text-xl font-bold my-4">disabled</h3>
+    <m-select placeholder="Выберите город" disabled>
+      <option v-for="i of list" :key="i.title">{{ i.title }}</option>
+    </m-select>
   </div>
 
   <m-alert :open="alert" :type="typeAlert" title="hello world" @close="alert = false" />
@@ -221,10 +232,16 @@ import MBadge from '@/components/data/MBadge.vue'
 import MSwitch from '@/components/form/MSwitch.vue'
 import MResult from '@/components/data/MResult.vue'
 import MAlert from '@/components/notice/MAlert.vue'
+import MSelect from '@/components/form/MSelect.vue'
 
 interface ThreeData {
   label: string
   children: ThreeData[]
+}
+
+interface CityList {
+  title: string
+  value: string
 }
 
 const answer: Ref<UnwrapRef<boolean>> = ref(true)
@@ -338,6 +355,25 @@ const three: Ref<UnwrapRef<ThreeData>> = ref({
     }
   ]
 })
+
+const list: Ref<UnwrapRef<CityList[]>> = ref([
+  {
+    title: 'Moscow',
+    value: 'msk'
+  },
+  {
+    title: 'Saint Petersburg',
+    value: 'spb'
+  },
+  {
+    title: 'Ekaterinburg',
+    value: 'ekb'
+  },
+  {
+    title: 'Domodedovo',
+    value: 'dmd'
+  }
+])
 
 function test(): void {
   console.log('test')
