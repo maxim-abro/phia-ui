@@ -1,0 +1,1 @@
+{"version":3,"file":"DropdownType.d.ts","sourceRoot":"","sources":["../../src/types/DropdownType.ts"],"names":[],"mappings":"AACA,MAAM,WAAW,YAAY;IAC3B,IAAI,CAAC,EAAE,QAAQ,GAAG,MAAM,CAAA;IACxB,SAAS,CAAC,EAAE,MAAM,CAAA;IAClB,QAAQ,CAAC,EAAE,OAAO,CAAA;IAClB,OAAO,CAAC,EAAE,OAAO,GAAG,OAAO,CAAA;IAC3B,WAAW,CAAC,EAAE,MAAM,CAAA;CACrB"}
