@@ -98,6 +98,59 @@
       <m-input type="password" show-password />
     </div>
 
+    <h2 class="text-3xl font-bold my-8">result</h2>
+    <h3 class="text-xl font-bold my-4">default</h3>
+    <div class="grid grid-cols-4">
+      <m-result icon="success" title="title" sub-title="subtitle description" />
+      <m-result icon="warning" title="title" sub-title="subtitle description" />
+      <m-result icon="info" title="title" sub-title="subtitle description" />
+      <m-result icon="error" title="title" sub-title="subtitle description" />
+    </div>
+
+    <h2 class="text-3xl font-bold my-8">alert</h2>
+    <h3 class="text-xl font-bold my-4">default</h3>
+    <div class="">
+      <m-button @click="openAlert('default')" class="mr-4">default</m-button>
+      <m-button @click="openAlert('success')" class="mr-4">success</m-button>
+      <m-button @click="openAlert('info')" class="mr-4">info</m-button>
+      <m-button @click="openAlert('error')" class="mr-4">error</m-button>
+    </div>
+
+    <h2 class="text-3xl font-bold my-8">Select</h2>
+    <h3 class="text-xl font-bold my-4">default</h3>
+    <m-select placeholder="Выберите город">
+      <option v-for="i of list" :key="i.title">{{ i.title }}</option>
+    </m-select>
+
+    <h3 class="text-xl font-bold my-4">disabled</h3>
+    <m-select placeholder="Выберите город" disabled>
+      <option v-for="i of list" :key="i.title">{{ i.title }}</option>
+    </m-select>
+
+    <h2 class="text-3xl font-bold my-8">Collapse</h2>
+    <h3 class="text-xl font-bold my-4">default</h3>
+    <m-collapse>
+      <m-collapse-item title="collapse 1" :id="1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis culpa deserunt
+        eveniet maxime modi neque nisi officiis provident repellendus. Accusantium eaque
+        exercitationem ipsum modi neque nulla perspiciatis temporibus tenetur?
+      </m-collapse-item>
+      <m-collapse-item title="collapse 2" :id="2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis culpa deserunt
+        eveniet maxime modi neque nisi officiis provident repellendus. Accusantium eaque
+        exercitationem ipsum modi neque nulla perspiciatis temporibus tenetur?
+      </m-collapse-item>
+      <m-collapse-item title="collapse 3" :id="3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis culpa deserunt
+        eveniet maxime modi neque nisi officiis provident repellendus. Accusantium eaque
+        exercitationem ipsum modi neque nulla perspiciatis temporibus tenetur?
+      </m-collapse-item>
+    </m-collapse>
+
+    <h2 class="text-3xl font-bold my-8">Breadcrumbs</h2>
+    <h3 class="text-xl font-bold my-4">default</h3>
+    <m-breadcrumbs :crumbs="bc" />
+
     <h2 class="text-3xl font-bold my-8">input number</h2>
     <h3 class="text-xl font-bold my-4">default</h3>
     <div class="">
@@ -182,62 +235,20 @@
 
     <h2 class="text-3xl font-bold my-8">switch</h2>
     <h3 class="text-xl font-bold my-4">default</h3>
-    <div class="">
-      <m-switch>switch</m-switch>
-    </div>
-
-    <h2 class="text-3xl font-bold my-8">result</h2>
-    <h3 class="text-xl font-bold my-4">default</h3>
-    <div class="grid grid-cols-4">
-      <m-result icon="success" title="title" sub-title="subtitle description" />
-      <m-result icon="warning" title="title" sub-title="subtitle description" />
-      <m-result icon="info" title="title" sub-title="subtitle description" />
-      <m-result icon="error" title="title" sub-title="subtitle description" />
-    </div>
-
-    <h2 class="text-3xl font-bold my-8">alert</h2>
+    <m-switch>switch</m-switch>
+    <h2 class="text-3xl font-bold my-8">Dropdown</h2>
     <h3 class="text-xl font-bold my-4">default</h3>
     <div class="">
-      <m-button @click="openAlert('default')" class="mr-4">default</m-button>
-      <m-button @click="openAlert('success')" class="mr-4">success</m-button>
-      <m-button @click="openAlert('info')" class="mr-4">info</m-button>
-      <m-button @click="openAlert('error')" class="mr-4">error</m-button>
+      <m-dropdown type="button">
+        open popup
+        <template #dropdown>
+          <MDropdownItem>1</MDropdownItem>
+          <MDropdownItem>2</MDropdownItem>
+          <MDropdownItem>3</MDropdownItem>
+          <MDropdownItem>4</MDropdownItem>
+        </template>
+      </m-dropdown>
     </div>
-
-    <h2 class="text-3xl font-bold my-8">Select</h2>
-    <h3 class="text-xl font-bold my-4">default</h3>
-    <m-select placeholder="Выберите город">
-      <option v-for="i of list" :key="i.title">{{ i.title }}</option>
-    </m-select>
-
-    <h3 class="text-xl font-bold my-4">disabled</h3>
-    <m-select placeholder="Выберите город" disabled>
-      <option v-for="i of list" :key="i.title">{{ i.title }}</option>
-    </m-select>
-
-    <h2 class="text-3xl font-bold my-8">Collapse</h2>
-    <h3 class="text-xl font-bold my-4">default</h3>
-    <m-collapse>
-      <m-collapse-item title="collapse 1" :id="1">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis culpa deserunt
-        eveniet maxime modi neque nisi officiis provident repellendus. Accusantium eaque
-        exercitationem ipsum modi neque nulla perspiciatis temporibus tenetur?
-      </m-collapse-item>
-      <m-collapse-item title="collapse 2" :id="2">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis culpa deserunt
-        eveniet maxime modi neque nisi officiis provident repellendus. Accusantium eaque
-        exercitationem ipsum modi neque nulla perspiciatis temporibus tenetur?
-      </m-collapse-item>
-      <m-collapse-item title="collapse 3" :id="3">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis culpa deserunt
-        eveniet maxime modi neque nisi officiis provident repellendus. Accusantium eaque
-        exercitationem ipsum modi neque nulla perspiciatis temporibus tenetur?
-      </m-collapse-item>
-    </m-collapse>
-
-    <h2 class="text-3xl font-bold my-8">Breadcrumbs</h2>
-    <h3 class="text-xl font-bold my-4">default</h3>
-    <m-breadcrumbs :crumbs="bc" />
   </div>
 
   <m-alert :open="alert" :type="typeAlert" title="hello world" @close="alert = false" />
@@ -261,6 +272,8 @@ import MCollapse from '@/components/data/collapse/MCollapse.vue'
 import MCollapseItem from '@/components/data/collapse/MCollapseItem.vue'
 import MBreadcrumbs from '@/components/navigation/MBreadcrumbs.vue'
 import type { Crumb } from '@/types/BreadcrumbsType'
+import MDropdown from '@/components/navigation/MDropdown.vue'
+import MDropdownItem from '@/components/navigation/MDropdownItem.vue'
 
 interface ThreeData {
   label: string

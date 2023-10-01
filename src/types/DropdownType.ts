@@ -1,4 +1,3 @@
-
 export interface DropdownType {
   type?: 'button' | 'text'
   maxHeight?: number
