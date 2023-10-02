@@ -1,4 +1,4 @@
 export interface TagType {
-  type?: 'primary' | 'success' | 'info' | 'warning' | 'danger'
+  type?: 'primary' | 'success' | 'warning' | 'danger' | 'default'
   closable?: boolean
 }
