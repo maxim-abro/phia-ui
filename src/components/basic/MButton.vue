@@ -28,42 +28,46 @@ const getClass = computed(() => {
 
 <style scoped>
 .default:not([disabled]):not(.btn-outline) {
-  @apply bg-white border-zinc-300 border hover:bg-primary-50 hover:text-primary hover:border-primary active:border-primary-800 active:text-primary-800 focus:bg-primary-50;
+  @apply bg-white rounded ring-1 ring-zinc-400;
+  @apply hover:ring-2 hover:ring-zinc-600 hover:bg-zinc-300;
+  @apply focus:ring-2 focus:ring-zinc-600 focus:bg-zinc-300 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-4;
+  @apply active:ring-2 active:ring-zinc-600 active:bg-zinc-400 active:outline active:outline-2 active:outline-primary active:outline-offset-4;
+  @apply transition-all duration-150;
 }
 .primary:not([disabled]):not(.btn-outline) {
-  @apply bg-primary text-white hover:bg-primary-400 active:bg-primary-700 focus:bg-primary-400;
+  @apply bg-primary ring-1 ring-primary-600 text-white;
+  @apply hover:bg-primary-600 hover:ring-primary-800 hover:ring-2;
+  @apply focus:bg-primary-600 focus:ring-primary-800 focus:ring-2 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-4;
+  @apply active:ring-primary-800 active:ring-2 active:outline active:outline-2 active:outline-primary active:outline-offset-4 active:bg-primary-700;
+  @apply transition-all duration-150;
 }
 .success:not([disabled]):not(.btn-outline) {
-  @apply bg-green-500 text-white hover:bg-green-400 active:bg-green-500 focus:bg-green-400;
+  @apply bg-green-500 ring-1 ring-green-600 text-white;
+  @apply hover:bg-green-600 hover:ring-green-800 hover:ring-2;
+  @apply focus:bg-green-600 focus:ring-green-800 focus:ring-2 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-4;
+  @apply active:ring-green-800 active:ring-2 active:outline active:outline-2 active:outline-primary active:outline-offset-4 active:bg-green-700;
+  @apply transition-all duration-150;
 }
 .info:not([disabled]):not(.btn-outline) {
-  @apply bg-zinc-500 text-white hover:bg-zinc-400 active:bg-zinc-500 focus:bg-zinc-400;
+  @apply bg-zinc-500 ring-1 ring-zinc-600 text-white;
+  @apply hover:bg-zinc-600 hover:ring-zinc-800 hover:ring-2;
+  @apply focus:bg-zinc-600 focus:ring-zinc-800 focus:ring-2 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-4;
+  @apply active:ring-zinc-800 active:ring-2 active:outline active:outline-2 active:outline-primary active:outline-offset-4 active:bg-zinc-700;
+  @apply transition-all duration-150;
 }
 .warning:not([disabled]):not(.btn-outline) {
-  @apply bg-orange-500 text-white hover:bg-orange-400 active:bg-orange-500 focus:bg-orange-400;
+  @apply bg-orange-500 ring-1 ring-orange-600 text-white;
+  @apply hover:bg-orange-600 hover:ring-orange-800 hover:ring-2;
+  @apply focus:bg-orange-600 focus:ring-orange-800 focus:ring-2 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-4;
+  @apply active:ring-orange-800 active:ring-2 active:outline active:outline-2 active:outline-primary active:outline-offset-4 active:bg-orange-700;
+  @apply transition-all duration-150;
 }
 .danger:not([disabled]):not(.btn-outline) {
-  @apply bg-red-500 text-white hover:bg-red-400 active:bg-red-500 focus:bg-red-400;
-}
-
-/* disabled */
-.default[disabled] {
-  @apply bg-white border-zinc-300 border text-zinc-300;
-}
-.primary[disabled] {
-  @apply bg-primary-300 text-white;
-}
-.success[disabled] {
-  @apply bg-green-300 text-white;
-}
-.info[disabled] {
-  @apply bg-zinc-300 text-white;
-}
-.warning[disabled] {
-  @apply bg-orange-300 text-white;
-}
-.danger[disabled] {
-  @apply bg-red-300 text-white;
+  @apply bg-red-500 ring-1 ring-red-600 text-white;
+  @apply hover:bg-red-600 hover:ring-red-800 hover:ring-2;
+  @apply focus:bg-red-600 focus:ring-red-800 focus:ring-2 focus:outline focus:outline-2 focus:outline-primary focus:outline-offset-4;
+  @apply active:ring-red-800 active:ring-2 active:outline active:outline-2 active:outline-primary active:outline-offset-4 active:bg-red-700;
+  @apply transition-all duration-150;
 }
 
 /* outline */
@@ -106,6 +110,6 @@ const getClass = computed(() => {
   @apply bg-red-50 border border-red-300 text-red-300;
 }
 button[disabled] {
-  @apply cursor-not-allowed;
+  @apply cursor-not-allowed text-zinc-400 bg-zinc-50 ring-1 ring-zinc-400 rounded;
 }
 </style>
