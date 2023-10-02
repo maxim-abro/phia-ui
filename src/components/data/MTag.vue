@@ -1,5 +1,5 @@
 <template>
-  <span class="border rounded px-3 pt-1.5 pb-2 text-sm whitespace-nowrap tag" :class="props.type">
+  <a href="" @click.prevent class="rounded-2xl px-2 pt-0.5 pb-1 text-xs whitespace-nowrap tag" :class="props.type">
     <slot />
     <svg
       @click="$emit('close', $event)"
@@ -16,33 +16,53 @@
         d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
       />
     </svg>
-  </span>
+  </a>
 </template>
 
 <script setup lang="ts">
 import type { TagType } from '@/types/TagType'
 
 const props = withDefaults(defineProps<TagType>(), {
-  type: 'primary',
+  type: 'default',
   closable: false
 })
 </script>
 
 <style scoped>
 .primary {
-  @apply border-primary text-primary bg-primary-50;
+  @apply text-primary-800 bg-primary-200 cursor-pointer;
+  @apply hover:ring-1 hover:ring-primary-600;
+  @apply focus:outline focus:outline-offset-2 focus:outline-2 focus:outline-primary;
+  @apply active:bg-primary-300 active:outline active:outline-offset-2 active:outline-2 active:outline-primary;
+  @apply transition-all duration-150;
 }
 .success {
-  @apply border-green-500 text-green-500 bg-green-50;
-}
-.info {
-  @apply border-zinc-500 text-zinc-500 bg-zinc-50;
+  @apply text-green-800 bg-green-200 cursor-pointer;
+  @apply hover:ring-1 hover:ring-green-600;
+  @apply focus:outline focus:outline-offset-2 focus:outline-2 focus:outline-primary;
+  @apply active:bg-green-300 active:outline active:outline-offset-2 active:outline-2 active:outline-primary;
+  @apply transition-all duration-150;
 }
 .warning {
-  @apply border-orange-500 text-orange-500 bg-orange-50;
+  @apply text-orange-800 bg-orange-200 cursor-pointer;
+  @apply hover:ring-1 hover:ring-orange-600;
+  @apply focus:outline focus:outline-offset-2 focus:outline-2 focus:outline-primary;
+  @apply active:bg-orange-300 active:outline active:outline-offset-2 active:outline-2 active:outline-primary;
+  @apply transition-all duration-150;
 }
 .danger {
-  @apply border-red-500 text-red-500 bg-red-50;
+  @apply text-red-800 bg-red-200 cursor-pointer;
+  @apply hover:ring-1 hover:ring-red-600;
+  @apply focus:outline focus:outline-offset-2 focus:outline-2 focus:outline-primary;
+  @apply active:bg-red-300 active:outline active:outline-offset-2 active:outline-2 active:outline-primary;
+  @apply transition-all duration-150;
+}
+.default {
+  @apply text-zinc-700 bg-zinc-200 cursor-pointer;
+  @apply hover:ring-1 hover:ring-zinc-600;
+  @apply focus:outline focus:outline-offset-2 focus:outline-2 focus:outline-primary;
+  @apply active:bg-zinc-300 active:outline active:outline-offset-2 active:outline-2 active:outline-primary;
+  @apply transition-all duration-150;
 }
 
 .close-primary {
